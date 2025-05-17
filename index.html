@@ -72,7 +72,7 @@
         map.on('click', onMapClick);
     </script>
     <script>
-        fetch('data/TestParcels.geojson')
+        fetch('data/TestParcelsWGS84.geojson')
             .then(response => response.json())
             .then(data => {
               L.geoJSON(data, {
