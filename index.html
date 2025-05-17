@@ -28,15 +28,33 @@
         </nav>
     </header>
 
-
-    
     <!-- Parcel Viewer -->
     <section id="parcelviewer" class="py-20 text-center items-center">
-        <h2 class="text-4xl font-bold mb-4">Chautauqua County Parcel Viewer</h2>
-            <div class="grid md:grid-cols-1 gap-8 items-center">
-                <!-- Parcel Viewer Card -->
-                <div id="Map1" class="w-full h-[1000px] relative z-[1]"></div>
-
+      <h2 class="text-4xl font-bold mb-4">Chautauqua County Parcel Viewer</h2>
+    
+      <div class="flex justify-center gap-4 max-w-[1400px] mx-auto">
+        
+        <!-- Left Widget / Legend -->
+        <div id="left-widget" class="w-48 bg-white p-4 rounded shadow sticky top-24 self-start">
+          <h3 class="font-semibold mb-2">Legend (Left)</h3>
+          <ul class="text-left text-sm">
+            <li><span class="inline-block w-4 h-4 bg-red-500 mr-2"></span>Parcel Boundary</li>
+            <!-- Add more legend items here -->
+          </ul>
+        </div>
+        
+        <!-- Map -->
+        <div id="Map1" class="flex-1 h-[1000px] rounded shadow"></div>
+        
+        <!-- Right Widget / Legend -->
+        <div id="right-widget" class="w-48 bg-white p-4 rounded shadow sticky top-24 self-start">
+          <h3 class="font-semibold mb-2">Info Panel (Right)</h3>
+          <p>Additional info or controls here.</p>
+        </div>
+      
+      </div>
+    </section>
+    
 
             </div>
         </div>
@@ -47,6 +65,9 @@
         <h2 class="text-2xl font-bold mb-4">About</h2>
         <p class="text-lg">This was created as a learning project by Joe Neratko</p>
     </section>
+
+    
+    <!-- Javascript -->
     <script>
         var map = L.map('Map1').setView([42.323, -79.58], 10);
 
